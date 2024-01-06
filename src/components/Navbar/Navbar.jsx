@@ -1,4 +1,5 @@
-import React from "react";
+
+import PropTypes from "prop-types";
 import Logo from "../../assets/logo.png";
 import { IoMdSearch } from "react-icons/io";
 import { FaCartShopping } from "react-icons/fa6";
@@ -133,6 +134,11 @@ const Navbar = ({ handleOrderPopup }) => {
       </div>
     </div>
   );
+};
+
+// Adicionando PropTypes para garantir que handleOrderPopup seja uma função
+Navbar.propTypes = {
+  handleOrderPopup: PropTypes.func.isRequired,
 };
 
 export default Navbar;
